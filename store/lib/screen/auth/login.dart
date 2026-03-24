@@ -45,27 +45,29 @@ border: OutlineInputBorder(),
 prefix: Icon(Icons.email)
 ),
 ),
+const SizedBox(height: 20),
 TextField(
 controller: _emailController,
 decoration: const InputDecoration(
-labelText: 'Email',
+labelText: 'password',
 border: OutlineInputBorder(),
 prefix: Icon(Icons.email)
 ),
 ),
-TextField(
-controller: _emailController,
-decoration: const InputDecoration(
-labelText: 'Email',
-border: OutlineInputBorder(),
-prefix: Icon(Icons.email)
-),
-),
+const SizedBox(height: 20),
+
 
           ElevatedButton(onPressed: (){
             Navigator.pushReplacementNamed(context, '/home');
-          }, child: Text('Login'))
+          }, child: Text('Login')),
+          const SizedBox(height: 120),
+          Text('Dont have an account?'),
+          TextButton(onPressed: (){
+            Navigator.pushReplacementNamed(context, '/register');
+          }, child: Text('Register'))
+
         ],
+        
       ),
     )
 
